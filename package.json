@@ -1,0 +1,22 @@
+{
+  "name": "blockchain-sample",
+  "version": "1.0.0",
+  "description": "This will be your first project on this Learning Path you have admin permissions on this repo so you can change it as you like.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zircon-tech/create-your-own-blockchain-alejandrodk.git"
+  },
+  "author": "Alejandro Barrios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zircon-tech/create-your-own-blockchain-alejandrodk/issues"
+  },
+  "homepage": "https://github.com/zircon-tech/create-your-own-blockchain-alejandrodk#readme",
+  "dependencies": {
+    "@types/node": "^18.0.3"
+  }
+}
