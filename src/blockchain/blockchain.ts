@@ -6,7 +6,10 @@ export class Blockchain {
   }
 
   createGenesisBlock(): Block {
-    return new Block(Date.now().toString());
+    const genesis = new Block(Date.now().toString());
+    genesis.buildHash();
+
+    return genesis;
   }
 
   getLastBlock(): Block {
@@ -14,9 +17,9 @@ export class Blockchain {
   }
 
   addBlock(block: Block): void {
-    const { prevHash } = this.getLastBlock();
+    const { hash } = this.getLastBlock();
 
-    block.prevHash = prevHash;
+    block.prevHash = hash;
     block.buildHash();
     block.mine(this.difficulty);
 

@@ -3,7 +3,7 @@ import { encrypt } from "../utils/utils";
 export class Block {
   constructor(
     public timestamp: string,
-    public data = [],
+    public data: any = null,
     public prevHash: string = "",
     public hash = "",
     public nonce = 0
