@@ -4,7 +4,7 @@
   "description": "This will be your first project on this Learning Path you have admin permissions on this repo so you can change it as you like.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc src/index.ts && node src/index.js"
   },
   "repository": {
     "type": "git",
