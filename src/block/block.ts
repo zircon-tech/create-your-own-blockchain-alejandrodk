@@ -1,13 +1,13 @@
 import { encrypt } from "../utils/utils";
 
 export class Block {
-  constructor(
-    public timestamp: string,
-    public data: any = null,
-    public prevHash: string = "",
-    public hash = "",
-    public nonce = 0
-  ) {}
+  public hash: string;
+  public prevHash = "";
+  public nonce = 0;
+
+  constructor(public timestamp: string, public data?: any) {
+    this.buildHash();
+  }
 
   buildHash(): void {
     this.hash = encrypt(

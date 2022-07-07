@@ -1,8 +1,12 @@
 import { Block } from "./../block/block";
 
 export class Blockchain {
-  constructor(public chain: Block[] = [], public difficulty = 1) {
+  constructor(private chain: Block[] = [], public difficulty = 1) {
     this.chain.push(this.createGenesisBlock());
+  }
+
+  getChain(): Block[] {
+    return this.chain;
   }
 
   createGenesisBlock(): Block {

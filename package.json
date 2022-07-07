@@ -2,7 +2,7 @@
   "name": "blockchain-sample",
   "version": "1.0.0",
   "description": "This will be your first project on this Learning Path you have admin permissions on this repo so you can change it as you like.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "tsc src/index.ts && node src/index.js"
   },
