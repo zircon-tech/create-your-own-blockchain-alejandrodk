@@ -1,7 +1,7 @@
 import { Block } from "./../block/block";
 
 export class Blockchain {
-  constructor(public chain: Block[]) {
+  constructor(public chain: Block[], public difficulty = 1) {
     this.chain = [this.createGenesisBlock()];
   }
 
@@ -18,7 +18,8 @@ export class Blockchain {
 
     block.prevHash = prevHash;
     block.buildHash();
-
+    block.mine(this.difficulty);
+    
     this.chain.push(Object.freeze(block));
   }
 }
